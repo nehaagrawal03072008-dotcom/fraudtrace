@@ -1,0 +1,318 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FraudTrace | Evidence Intelligence</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <aside class="sidebar">
+        <div class="brand">
+            <div class="brand-icon">F</div>
+            <div>
+                <h2>FraudTrace</h2>
+                <span>Evidence Intelligence</span>
+            </div>
+        </div>
+
+        <div class="nav-label">WORKSPACE</div>
+        <a class="nav-link active" href="#overview">▦ &nbsp; Overview</a>
+        <a class="nav-link" href="#evidence">▤ &nbsp; Evidence Records</a>
+        <a class="nav-link" href="#analysis">⌕ &nbsp; Fraud Analysis</a>
+        <a class="nav-link" href="#graph">◎ &nbsp; Provenance Graph</a>
+        <a class="nav-link" href="#timeline">◷ &nbsp; Case Timeline</a>
+
+        <div class="sidebar-bottom">
+            <div class="status-dot"></div>
+            <span>Local investigation workspace</span>
+            <p>SUTRAM 2026 · IGDTUW</p>
+        </div>
+    </aside>
+
+    <main class="main-content">
+
+        <header class="topbar">
+            <div>
+                <p class="eyebrow">INVESTIGATION WORKSPACE / 2026</p>
+                <h1>Evidence Intelligence Dashboard</h1>
+                <p class="subtitle">
+                    Connect evidence, identify suspicious patterns and explore relationships.
+                </p>
+            </div>
+            <div class="topbar-right">
+                <span class="system-status"><span></span> System ready</span>
+                <button class="btn btn-outline" id="export-btn">Export CSV ↗</button>
+            </div>
+        </header>
+
+        <section id="overview" class="stats-grid">
+            <article class="stat-card">
+                <div class="stat-top">
+                    <span>Total evidence</span>
+                    <span class="stat-icon blue">▤</span>
+                </div>
+                <h2 id="total-count">0</h2>
+                <p>Records collected</p>
+            </article>
+
+            <article class="stat-card">
+                <div class="stat-top">
+                    <span>Cases identified</span>
+                    <span class="stat-icon purple">⌘</span>
+                </div>
+                <h2 id="case-count">0</h2>
+                <p>Unique case references</p>
+            </article>
+
+            <article class="stat-card">
+                <div class="stat-top">
+                    <span>Duplicate records</span>
+                    <span class="stat-icon orange">⧉</span>
+                </div>
+                <h2 id="duplicate-count">0</h2>
+                <p>Records requiring review</p>
+            </article>
+
+            <article class="stat-card">
+                <div class="stat-top">
+                    <span>High-risk flags</span>
+                    <span class="stat-icon red">⚑</span>
+                </div>
+                <h2 id="risk-count">0</h2>
+                <p>Rule-based review alerts</p>
+            </article>
+        </section>
+
+        <section class="content-grid">
+            <article class="panel form-panel" id="evidence">
+                <div class="panel-heading">
+                    <div>
+                        <p class="eyebrow">CASE MANAGEMENT</p>
+                        <h2>Add evidence record</h2>
+                    </div>
+                    <span class="step-number">01</span>
+                </div>
+
+                <p class="panel-description">
+                    Record a digital clue with its source and case reference.
+                </p>
+
+                <form id="evidence-form">
+                    <div class="form-row">
+                        <div class="field">
+                            <label for="case-id">Case ID</label>
+                            <input id="case-id" name="case_id"
+                                   placeholder="e.g. FT-1001" required>
+                        </div>
+                        <div class="field">
+                            <label for="evidence-type">Evidence type</label>
+                            <select id="evidence-type" name="evidence_type" required>
+                                <option value="Phone">Phone</option>
+                                <option value="Email">Email</option>
+                                <option value="Bank Account">Bank Account</option>
+                                <option value="Transaction">Transaction</option>
+                                <option value="URL">URL</option>
+                                <option value="IP Address">IP Address</option>
+                                <option value="Social ID">Social ID</option>
+                                <option value="Document">Document</option>
+                            </select>
+                        </div>
+                    </div>
+
+                    <div class="field">
+                        <label for="evidence-value">Evidence value / identifier</label>
+                        <input id="evidence-value" name="value"
+                               placeholder="Enter the phone, account, URL..." required>
+                    </div>
+
+                    <div class="field">
+                        <label for="evidence-source">Evidence source</label>
+                        <input id="evidence-source" name="source"
+                               placeholder="e.g. Customer complaint, transaction log" required>
+                    </div>
+
+                    <div class="field">
+                        <label for="evidence-date">Date and time</label>
+                        <input id="evidence-date" name="timestamp" type="datetime-local" required>
+                    </div>
+
+                    <div class="field">
+                        <label for="evidence-notes">Investigation notes</label>
+                        <textarea id="evidence-notes" name="notes" rows="3"
+                                  placeholder="Describe why this evidence may matter..."></textarea>
+                    </div>
+
+                    <div class="form-actions">
+                        <button type="reset" class="btn btn-outline">Clear form</button>
+                        <button type="submit" class="btn btn-primary">+ Add evidence</button>
+                    </div>
+
+                    <p id="form-message" class="form-message" role="status"></p>
+                </form>
+            </article>
+
+            <article class="panel analysis-panel" id="analysis">
+                <div class="panel-heading">
+                    <div>
+                        <p class="eyebrow">INTELLIGENCE ENGINE</p>
+                        <h2>Fraud signal overview</h2>
+                    </div>
+                    <span class="live-tag">LIVE DATA</span>
+                </div>
+
+                <p class="panel-description">
+                    Signals generated from simple, explainable detection rules.
+                </p>
+
+                <div class="analysis-highlight">
+                    <div class="highlight-icon">⌁</div>
+                    <div>
+                        <h3 id="analysis-title">Awaiting evidence</h3>
+                        <p id="analysis-summary">
+                            Add evidence to begin analysing the records.
+                        </p>
+                    </div>
+                </div>
+
+                <div class="signal-list">
+                    <div class="signal-row">
+                        <div class="signal-info">
+                            <span class="signal-marker red-marker"></span>
+                            <div>
+                                <strong>High-risk records</strong>
+                                <small>Score of 60 or above</small>
+                            </div>
+                        </div>
+                        <strong id="high-signal">0</strong>
+                    </div>
+
+                    <div class="signal-row">
+                        <div class="signal-info">
+                            <span class="signal-marker orange-marker"></span>
+                            <div>
+                                <strong>Records to review</strong>
+                                <small>Medium-risk indicators</small>
+                            </div>
+                        </div>
+                        <strong id="medium-signal">0</strong>
+                    </div>
+
+                    <div class="signal-row">
+                        <div class="signal-info">
+                            <span class="signal-marker blue-marker"></span>
+                            <div>
+                                <strong>Linked relationships</strong>
+                                <small>Shared identifiers</small>
+                            </div>
+                        </div>
+                        <strong id="link-count">0</strong>
+                    </div>
+                </div>
+
+                <div class="notice">
+                    <strong>Note:</strong> Risk scores are heuristic indicators, not proof of fraud.
+                    Review the underlying evidence before drawing conclusions.
+                </div>
+            </article>
+        </section>
+
+        <section class="panel records-panel">
+            <div class="panel-heading">
+                <div>
+                    <p class="eyebrow">EVIDENCE REGISTER</p>
+                    <h2>Collected evidence</h2>
+                </div>
+                <span id="record-label" class="record-label">0 records</span>
+            </div>
+
+            <div class="table-controls">
+                <input id="search-input" type="search"
+                       placeholder="Search cases, identifiers or sources...">
+                <select id="risk-filter" aria-label="Filter evidence by risk">
+                    <option value="all">All risk levels</option>
+                    <option value="high">High risk</option>
+                    <option value="medium">Medium risk</option>
+                    <option value="low">Low risk</option>
+                    <option value="duplicate">Duplicates</option>
+                </select>
+            </div>
+
+            <div class="table-wrap">
+                <table>
+                    <thead>
+                        <tr>
+                            <th>Case / ID</th>
+                            <th>Evidence</th>
+                            <th>Source</th>
+                            <th>Risk score</th>
+                            <th>Review status</th>
+                        </tr>
+                    </thead>
+                    <tbody id="evidence-table-body">
+                        <tr>
+                            <td colspan="5" class="empty-state">
+                                Loading evidence records...
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </section>
+
+        <section class="visual-grid">
+            <article class="panel graph-panel" id="graph">
+                <div class="panel-heading">
+                    <div>
+                        <p class="eyebrow">RELATIONSHIP MAPPING</p>
+                        <h2>Evidence provenance graph</h2>
+                    </div>
+                    <span class="step-number">02</span>
+                </div>
+                <p class="panel-description">
+                    Shared identifiers connect evidence records across cases.
+                </p>
+
+                <div class="graph-legend">
+                    <span><i class="legend-dot case-dot"></i> Case</span>
+                    <span><i class="legend-dot evidence-dot"></i> Evidence</span>
+                    <span><i class="legend-dot shared-dot"></i> Shared identifier</span>
+                </div>
+
+                <div id="graph-container" class="graph-container">
+                    <p class="empty-state">The graph will appear when evidence is available.</p>
+                </div>
+                <p class="graph-caption">
+                    Connections represent shared identifiers, not confirmed criminal links.
+                </p>
+            </article>
+
+            <article class="panel timeline-panel" id="timeline">
+                <div class="panel-heading">
+                    <div>
+                        <p class="eyebrow">CHRONOLOGICAL VIEW</p>
+                        <h2>Evidence timeline</h2>
+                    </div>
+                    <span class="step-number">03</span>
+                </div>
+                <p class="panel-description">
+                    Follow the recorded sequence of evidence.
+                </p>
+                <div id="timeline-container" class="timeline-container">
+                    <p class="empty-state">No timeline records yet.</p>
+                </div>
+            </article>
+        </section>
+
+        <footer>
+            <span>FraudTrace · Evidence Intelligence &amp; Provenance Graph</span>
+            <span>PITCH BREAK</span>
+        </footer>
+    </main>
+
+    <script src="script.js"></script>
+</body>
+</html>
+
