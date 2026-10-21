@@ -113,10 +113,6 @@ Developed by:
 - Yusra
 - Nikita
 
-**Institution:** Indira Gandhi Delhi Technical University for Women (IGDTUW)
-
-**Event:** SUTRAM 2026 — ISEA_IGDTUW National Hackathon
-
 ## Disclaimer
 
 FraudTrace is an educational prototype. Its risk scores and relationship visualizations are intended to support preliminary review and must not be treated as definitive findings of fraud.
