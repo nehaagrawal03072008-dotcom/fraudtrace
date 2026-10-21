@@ -1,748 +1,323 @@
 
-
-
-.brand h2 {
-    margin: 0;
-    font-family: "Space Grotesk", sans-serif;
-    font-size: 19px;
-}
-
-.brand span {
-    display: block;
-    margin-top: 4px;
-    color: #a7b0c4;
-    font-size: 11px;
-}
-
-.nav-label, .eyebrow {
-    font-size: 10px;
-    font-weight: 700;
-    letter-spacing: 1.3px;
-}
-
-.nav-label {
-    padding: 0 12px 12px;
-    color: #8290aa;
-}
-
-.nav-link {
-    display: block;
-    margin-bottom: 6px;
-    padding: 13px 12px;
-    border-radius: 9px;
-    color: #b9c2d4;
-    text-decoration: none;
-    font-size: 13px;
-}
-
-.nav-link:hover, .nav-link.active {
-    background: #25314a;
-    color: #ffffff;
-}
-
-.nav-link.active {
-    box-shadow: inset 3px 0 #8290ff;
-}
-
-.sidebar-bottom {
-    margin-top: auto;
-    padding: 17px 10px 0;
-    border-top: 1px solid #2b364b;
-    color: #aab4c8;
-    font-size: 11px;
-}
-
-.status-dot, .system-status span {
-    display: inline-block;
-    width: 7px;
-    height: 7px;
-    margin-right: 6px;
-    border-radius: 50%;
-    background: #40c99a;
-}
-
-.sidebar-bottom p {
-    margin-top: 18px;
-    color: #7e8ba4;
-}
-
-.main-content {
-    max-width: 1800px;
-    margin-left: 250px;
-    padding: 34px 38px;
-}
-
-.topbar {
-    display: flex;
-    justify-content: space-between;
-    align-items: flex-start;
-    gap: 20px;
-    margin-bottom: 30px;
-}
-
-.eyebrow {
-    margin: 0 0 9px;
-    color: var(--blue);
-}
-
-h1, h2, h3, p {
-    overflow-wrap: anywhere;
-}
-
-h1, h2, h3 {
-    font-family: "Space Grotesk", sans-serif;
-}
-
-h1 {
-    margin: 0;
-    font-size: clamp(24px, 2.4vw, 32px);
-    letter-spacing: -1px;
-}
-
-.subtitle, .panel-description {
-    color: var(--muted);
-    line-height: 1.65;
-}
-
-.subtitle {
-    margin: 9px 0 0;
-}
-
-.topbar-right {
-    display: flex;
-    align-items: center;
-    flex-wrap: wrap;
-    gap: 14px;
-}
-
-.system-status {
-    color: #566278;
-    white-space: nowrap;
-    font-size: 12px;
-}
-
-.btn {
-    border: 1px solid transparent;
-    border-radius: 8px;
-    padding: 11px 15px;
-    font-weight: 600;
-    font-size: 12px;
-}
-
-.btn-primary {
-    background: var(--blue);
-    color: white;
-}
-
-.btn-primary:hover {
-    background: #4054d5;
-    transform: translateY(-1px);
-}
-
-.btn-outline {
-    border-color: #dfe3ed;
-    background: #ffffff;
-    color: #354057;
-}
-
-.btn-outline:hover {
-    border-color: var(--blue);
-    color: var(--blue);
-}
-
-.stats-grid {
-    display: grid;
-    grid-template-columns: repeat(4, minmax(0, 1fr));
-    gap: 17px;
-    margin-bottom: 22px;
-}
-
-.stat-card, .panel {
-    border: 1px solid var(--border);
-    border-radius: 13px;
-    background: var(--panel);
-    box-shadow: 0 3px 14px rgb(27 42 75 / 3%);
-}
-
-.stat-card {
-    padding: 21px;
-}
-
-.stat-top {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    gap: 8px;
-    color: #67738a;
-    font-size: 12px;
-}
-
-.stat-icon {
-    display: grid;
-    place-items: center;
-    width: 35px;
-    height: 35px;
-    border-radius: 9px;
-    font-size: 17px;
-}
-
-.blue { background: #e9edff; color: #5269ed; }
-.purple { background: #f0e9ff; color: #8a59cf; }
-.orange { background: #fff1dc; color: #cb8523; }
-.red { background: #ffeaec; color: #d94753; }
-
-.stat-card h2 {
-    margin: 15px 0 5px;
-    font-size: 31px;
-    letter-spacing: -1px;
-}
-
-.stat-card p {
-    margin: 0;
-    color: #929bad;
-    font-size: 11px;
-}
-
-.content-grid {
-    display: grid;
-    grid-template-columns: minmax(0, 1.1fr) minmax(0, 0.9fr);
-    gap: 20px;
-    margin-bottom: 22px;
-}
-
-.panel {
-    min-width: 0;
-    padding: 24px;
-}
-
-.panel-heading {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    gap: 12px;
-}
-
-.panel-heading h2 {
-    margin: 0;
-    font-size: 19px;
-    letter-spacing: -0.5px;
-}
-
-.panel-heading .eyebrow {
-    margin-bottom: 7px;
-}
-
-.panel-description {
-    margin: 10px 0 22px;
-    font-size: 12px;
-}
-
-.step-number, .live-tag, .record-label {
-    flex-shrink: 0;
-    border-radius: 7px;
-    padding: 7px 9px;
-    background: #f0f2ff;
-    color: var(--blue);
-    font-size: 10px;
-    font-weight: 700;
-}
-
-.live-tag {
-    background: #e8f7f0;
-    color: var(--green);
-    letter-spacing: 0.5px;
-}
-
-.field {
-    display: flex;
-    flex-direction: column;
-    gap: 8px;
-    margin-bottom: 17px;
-}
-
-.field label {
-    color: #465169;
-    font-size: 12px;
-    font-weight: 600;
-}
-
-.field input, .field select, .field textarea,
-.table-controls input, .table-controls select {
-    width: 100%;
-    min-width: 0;
-    border: 1px solid #e0e5ef;
-    border-radius: 8px;
-    outline: none;
-    background: #ffffff;
-    color: #253047;
-    padding: 12px;
-    font-size: 12px;
-}
-
-.field textarea {
-    resize: vertical;
-    line-height: 1.5;
-}
-
-.field input:focus, .field select:focus, .field textarea:focus,
-.table-controls input:focus, .table-controls select:focus {
-    border-color: var(--blue);
-    box-shadow: 0 0 0 3px rgb(82 105 237 / 10%);
-}
-
-.field input::placeholder, .field textarea::placeholder {
-    color: #a3acbc;
-}
-
-.form-row {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    gap: 13px;
-}
-
-.form-actions {
-    display: flex;
-    justify-content: flex-end;
-    gap: 10px;
-}
-
-.form-message {
-    min-height: 18px;
-    margin-bottom: 0;
-    font-size: 12px;
-    color: var(--green);
-}
-
-.form-message.error {
-    color: var(--red);
-}
-
-.analysis-highlight {
-    display: flex;
-    gap: 13px;
-    padding: 18px;
-    border: 1px solid #e6e9ff;
-    border-radius: 10px;
-    background: linear-gradient(120deg, #f4f5ff, #fafaff);
-}
-
-.highlight-icon {
-    display: grid;
-    place-items: center;
-    flex-shrink: 0;
-    width: 40px;
-    height: 40px;
-    border-radius: 10px;
-    background: #e2e6ff;
-    color: var(--blue);
-    font-size: 24px;
-}
-
-.analysis-highlight h3 {
-    margin: 1px 0 6px;
-    font-size: 14px;
-}
-
-.analysis-highlight p {
-    margin: 0;
-    color: #737f95;
-    font-size: 11px;
-    line-height: 1.6;
-}
-
-.signal-list {
-    margin-top: 13px;
-}
-
-.signal-row, .signal-info {
-    display: flex;
-    align-items: center;
-}
-
-.signal-row {
-    justify-content: space-between;
-    gap: 10px;
-    padding: 15px 2px;
-    border-bottom: 1px solid #edf0f5;
-}
-
-.signal-info {
-    gap: 11px;
-}
-
-.signal-info strong {
-    display: block;
-    font-size: 12px;
-}
-
-.signal-info small {
-    display: block;
-    margin-top: 4px;
-    color: var(--muted);
-    font-size: 10px;
-}
-
-.signal-row > strong {
-    font-size: 14px;
-}
-
-.signal-marker, .legend-dot {
-    display: inline-block;
-    flex-shrink: 0;
-    width: 9px;
-    height: 9px;
-    border-radius: 50%;
-}
-
-.red-marker { background: var(--red); }
-.orange-marker { background: var(--orange); }
-.blue-marker { background: var(--blue); }
-
-.notice {
-    margin-top: 19px;
-    padding: 13px;
-    border: 1px solid #f5e4be;
-    border-radius: 8px;
-    background: #fffaf0;
-    color: #8a6a31;
-    font-size: 10px;
-    line-height: 1.7;
-}
-
-.records-panel {
-    margin-bottom: 22px;
-}
-
-.record-label {
-    background: #f3f5f9;
-    color: #657087;
-}
-
-.table-controls {
-    display: flex;
-    gap: 12px;
-    margin-bottom: 18px;
-}
-
-.table-controls input {
-    max-width: 420px;
-}
-
-.table-controls select {
-    width: 165px;
-}
-
-.table-wrap {
-    width: 100%;
-    overflow-x: auto;
-}
-
-table {
-    width: 100%;
-    border-collapse: collapse;
-    text-align: left;
-    white-space: nowrap;
-}
-
-thead {
-    background: #f8f9fc;
-}
-
-th {
-    padding: 13px 12px;
-    color: #758096;
-    font-size: 10px;
-    font-weight: 700;
-    text-transform: uppercase;
-    letter-spacing: 0.5px;
-}
-
-td {
-    padding: 15px 12px;
-    border-bottom: 1px solid #edf0f5;
-    color: #59657a;
-    font-size: 11px;
-}
-
-tbody tr:hover {
-    background: #fafbff;
-}
-
-.case-cell strong, .case-cell small {
-    display: block;
-}
-
-.case-cell strong {
-    color: #27334a;
-    font-size: 11px;
-}
-
-.case-cell small {
-    margin-top: 4px;
-    color: #99a2b2;
-}
-
-.evidence-type {
-    display: inline-block;
-    margin-bottom: 5px;
-    border-radius: 5px;
-    padding: 5px 7px;
-    background: #eef0ff;
-    color: #5269ed;
-    font-size: 10px;
-}
-
-.value-cell {
-    display: block;
-    max-width: 210px;
-    overflow: hidden;
-    text-overflow: ellipsis;
-}
-
-.risk-pill, .status-pill {
-    display: inline-block;
-    border-radius: 20px;
-    padding: 6px 9px;
-    font-size: 10px;
-    font-weight: 700;
-}
-
-.risk-high { background: #ffeaec; color: #c53644; }
-.risk-medium { background: #fff1db; color: #aa6c17; }
-.risk-low { background: #e7f6ee; color: #267a59; }
-.status-duplicate { background: #f1eaff; color: #7c4db1; }
-.status-review { background: #fff1db; color: #aa6c17; }
-.status-normal { background: #e7f6ee; color: #267a59; }
-
-.visual-grid {
-    display: grid;
-    grid-template-columns: minmax(0, 1.2fr) minmax(0, 0.8fr);
-    gap: 20px;
-}
-
-.graph-legend {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 16px;
-    margin-bottom: 15px;
-    color: #69758b;
-    font-size: 10px;
-}
-
-.graph-legend span {
-    display: inline-flex;
-    align-items: center;
-    gap: 6px;
-}
-
-.case-dot { background: #6679ef; }
-.evidence-dot { background: #31a888; }
-.shared-dot { background: #e5a03e; }
-
-.graph-container {
-    display: grid;
-    place-items: center;
-    min-height: 320px;
-    overflow: hidden;
-    border: 1px solid #edf0f5;
-    border-radius: 10px;
-    background-color: #fafbfe;
-    background-image: radial-gradient(#dfe4f0 1px, transparent 1px);
-    background-size: 19px 19px;
-}
-
-.graph-container svg {
-    display: block;
-    width: 100%;
-    height: 320px;
-}
-
-.graph-caption {
-    margin: 12px 0 0;
-    color: #9099aa;
-    font-size: 10px;
-    line-height: 1.6;
-}
-
-.graph-edge {
-    stroke: #c6cde0;
-    stroke-width: 1.7;
-}
-
-.graph-node {
-    stroke: #ffffff;
-    stroke-width: 2;
-}
-
-.graph-label {
-    fill: #344057;
-    font-family: "DM Sans", sans-serif;
-    font-size: 11px;
-    font-weight: 600;
-}
-
-.timeline-container {
-    padding-top: 5px;
-}
-
-.timeline-item {
-    position: relative;
-    margin-left: 6px;
-    padding: 0 0 23px 23px;
-    border-left: 2px solid #e4e8f2;
-}
-
-.timeline-item:last-child {
-    padding-bottom: 0;
-    border-left-color: transparent;
-}
-
-.timeline-item::before {
-    position: absolute;
-    top: 2px;
-    left: -6px;
-    width: 10px;
-    height: 10px;
-    border: 2px solid white;
-    border-radius: 50%;
-    background: var(--blue);
-    box-shadow: 0 0 0 2px #dfe4ff;
-    content: "";
-}
-
-.timeline-date {
-    margin-bottom: 6px;
-    color: var(--blue);
-    font-size: 10px;
-    font-weight: 700;
-}
-
-.timeline-item h3 {
-    margin: 0 0 6px;
-    font-size: 13px;
-}
-
-.timeline-item p {
-    margin: 0;
-    color: #79849a;
-    font-size: 11px;
-    line-height: 1.6;
-}
-
-.empty-state {
-    padding: 25px;
-    color: #929bad;
-    text-align: center;
-    font-size: 12px;
-    white-space: normal;
-}
-
-footer {
-    display: flex;
-    justify-content: space-between;
-    flex-wrap: wrap;
-    gap: 10px;
-    margin-top: 28px;
-    padding: 20px 0 5px;
-    border-top: 1px solid #e2e6ef;
-    color: #8993a5;
-    font-size: 10px;
-}
-
-@media (max-width: 1250px) {
-    .main-content {
-        padding: 28px 23px;
-    }
-
-    .sidebar {
-        width: 215px;
-    }
-
-    .main-content {
-        margin-left: 215px;
-    }
-
-    .stats-grid {
-        grid-template-columns: repeat(2, minmax(0, 1fr));
-    }
-
-    .content-grid, .visual-grid {
-        grid-template-columns: 1fr;
+const form = document.querySelector("#evidence-form");
+const message = document.querySelector("#form-message");
+const tableBody = document.querySelector("#evidence-table-body");
+
+let evidenceRecords = [];
+
+function escapeHTML(value) {
+    return String(value ?? "").replace(/[&<>"']/g, function (char) {
+        return {
+            "&": "&amp;",
+            "<": "&lt;",
+            ">": "&gt;",
+            '"': "&quot;",
+            "'": "&#39;"
+        }[char];
+    });
+}
+
+function riskLevel(score) {
+    if (score >= 60) return "high";
+    if (score >= 30) return "medium";
+    return "low";
+}
+
+function formatDate(value) {
+    const date = new Date(value);
+    return Number.isNaN(date.getTime())
+        ? value
+        : date.toLocaleString();
+}
+
+async function loadEvidence() {
+    try {
+        const response = await fetch("/api/evidence");
+        if (!response.ok) throw new Error("Could not load evidence");
+
+        const data = await response.json();
+        evidenceRecords = data.evidence || [];
+
+        updateDashboard();
+        renderTable();
+        renderGraph();
+        renderTimeline();
+    } catch (error) {
+        tableBody.innerHTML =
+            '<tr><td colspan="5">Could not load records. Check that Flask is running.</td></tr>';
     }
 }
 
-@media (max-width: 700px) {
-    .sidebar {
-        position: static;
-        width: 100%;
-        padding: 18px;
-    }
+function updateDashboard() {
+    const records = evidenceRecords;
+    const cases = new Set(records.map(item => item.case_id));
+    const duplicates = records.filter(item => item.is_duplicate);
+    const high = records.filter(item => item.risk_score >= 60);
+    const medium = records.filter(
+        item => item.risk_score >= 30 && item.risk_score < 60
+    );
 
-    .brand {
-        padding-bottom: 20px;
-    }
+    document.querySelector("#total-count").textContent = records.length;
+    document.querySelector("#case-count").textContent = cases.size;
+    document.querySelector("#duplicate-count").textContent = duplicates.length;
+    document.querySelector("#risk-count").textContent = high.length;
+    document.querySelector("#high-signal").textContent = high.length;
+    document.querySelector("#medium-signal").textContent = medium.length;
+    document.querySelector("#record-label").textContent =
+        `${records.length} records`;
 
-    .nav-label, .sidebar-bottom {
-        display: none;
-    }
+    const identifiers = new Set(
+        records.map(item =>
+            `${item.evidence_type.toLowerCase()}|${item.value.trim().toLowerCase()}`
+        )
+    );
 
-    .sidebar {
-        display: block;
-    }
+    const linkCount = records.length - identifiers.size;
+    document.querySelector("#link-count").textContent = linkCount;
 
-    .nav-link {
-        display: inline-block;
-        margin: 3px;
-        padding: 9px;
-        font-size: 11px;
-    }
+    document.querySelector("#analysis-title").textContent =
+        records.length ? "Analysis updated" : "Awaiting evidence";
 
-    .main-content {
-        margin-left: 0;
-        padding: 22px 14px;
-    }
-
-    .topbar {
-        flex-direction: column;
-    }
-
-    .topbar-right {
-        justify-content: space-between;
-        width: 100%;
-    }
-
-    .stats-grid {
-        gap: 10px;
-    }
-
-    .stat-card {
-        padding: 15px;
-    }
-
-    .stat-card h2 {
-        font-size: 25px;
-    }
-
-    .panel {
-        padding: 17px;
-    }
-
-    .form-row {
-        grid-template-columns: 1fr;
-        gap: 0;
-    }
-
-    .table-controls {
-        flex-direction: column;
-    }
-
-    .table-controls input, .table-controls select {
-        width: 100%;
-        max-width: none;
-    }
-
-    .graph-container, .graph-container svg {
-        min-height: 270px;
-        height: 270px;
-    }
+    document.querySelector("#analysis-summary").textContent =
+        records.length
+            ? `${high.length} high-risk records and ${duplicates.length} possible duplicates need review.`
+            : "Add evidence to begin analysing records.";
 }
+
+function renderTable() {
+    const search = document.querySelector("#search-input").value.toLowerCase();
+    const filter = document.querySelector("#risk-filter").value;
+
+    const filtered = evidenceRecords.filter(item => {
+        const text = [
+            item.case_id,
+            item.evidence_type,
+            item.value,
+            item.source,
+            item.notes
+        ].join(" ").toLowerCase();
+
+        const matchesSearch = text.includes(search);
+        const level = riskLevel(item.risk_score);
+
+        const matchesFilter =
+            filter === "all" ||
+            (filter === "duplicate" && item.is_duplicate) ||
+            filter === level;
+
+        return matchesSearch && matchesFilter;
+    });
+
+    if (!filtered.length) {
+        tableBody.innerHTML =
+            '<tr><td colspan="5">No matching evidence records.</td></tr>';
+        return;
+    }
+
+    tableBody.innerHTML = filtered.map(item => {
+        const level = riskLevel(item.risk_score);
+        let status = "Normal review";
+        let statusClass = "status-normal";
+
+        if (item.is_duplicate) {
+            status = "Possible duplicate";
+            statusClass = "status-duplicate";
+        } else if (level === "high" || level === "medium") {
+            status = "Review required";
+            statusClass = "status-review";
+        }
+
+        return `
+            <tr>
+                <td class="case-cell">
+                    <strong>${escapeHTML(item.case_id)}</strong>
+                    <small>#${escapeHTML(item.id)}</small>
+                </td>
+                <td>
+                    <span class="evidence-type">${escapeHTML(item.evidence_type)}</span>
+                    <span class="value-cell">${escapeHTML(item.value)}</span>
+                </td>
+                <td>${escapeHTML(item.source)}</td>
+                <td>
+                    <span class="risk-pill risk-${level}">
+                        ${Number(item.risk_score) || 0}/100
+                    </span>
+                </td>
+                <td>
+                    <span class="status-pill ${statusClass}">
+                        ${status}
+                    </span>
+                </td>
+            </tr>
+        `;
+    }).join("");
+}
+
+function renderGraph() {
+    const container = document.querySelector("#graph-container");
+
+    if (!evidenceRecords.length) {
+        container.innerHTML =
+            '<p class="empty-state">The graph will appear when evidence is available.</p>';
+        return;
+    }
+
+    const width = 600;
+    const height = Math.max(300, evidenceRecords.length * 75);
+    const nodes = [];
+    const edges = [];
+    const casePositions = {};
+    const identifierPositions = {};
+
+    evidenceRecords.forEach((item, index) => {
+        const caseKey = item.case_id;
+        const identifierKey =
+            `${item.evidence_type.toLowerCase()}|${item.value.trim().toLowerCase()}`;
+
+        if (!casePositions[caseKey]) {
+            casePositions[caseKey] = {
+                x: 100,
+                y: 55 + Object.keys(casePositions).length * 75,
+                label: caseKey,
+                color: "#6679ef"
+            };
+            nodes.push(casePositions[caseKey]);
+        }
+
+        if (!identifierPositions[identifierKey]) {
+            identifierPositions[identifierKey] = {
+                x: 420,
+                y: 55 + Object.keys(identifierPositions).length * 75,
+                label: item.value,
+                color: "#31a888"
+            };
+            nodes.push(identifierPositions[identifierKey]);
+        }
+
+        edges.push({
+            from: casePositions[caseKey],
+            to: identifierPositions[identifierKey]
+        });
+    });
+
+    const svgEdges = edges.map(edge =>
+        `<line class="graph-edge"
+            x1="${edge.from.x}" y1="${edge.from.y}"
+            x2="${edge.to.x}" y2="${edge.to.y}" />`
+    ).join("");
+
+    const svgNodes = nodes.map(node => `
+        <circle class="graph-node" cx="${node.x}" cy="${node.y}"
+                r="9" fill="${node.color}"></circle>
+        <text class="graph-label" x="${node.x + 14}" y="${node.y + 4}">
+            ${escapeHTML(node.label.slice(0, 22))}
+        </text>
+    `).join("");
+
+    container.innerHTML = `
+        <svg viewBox="0 0 ${width} ${height}"
+             role="img" aria-label="Evidence relationship graph">
+            ${svgEdges}
+            ${svgNodes}
+        </svg>
+    `;
+}
+
+function renderTimeline() {
+    const container = document.querySelector("#timeline-container");
+
+    if (!evidenceRecords.length) {
+        container.innerHTML =
+            '<p class="empty-state">No timeline records yet.</p>';
+        return;
+    }
+
+    const sorted = [...evidenceRecords].sort(
+        (a, b) => new Date(a.timestamp) - new Date(b.timestamp)
+    );
+
+    container.innerHTML = sorted.map(item => `
+        <div class="timeline-item">
+            <div class="timeline-date">${escapeHTML(formatDate(item.timestamp))}</div>
+            <h3>${escapeHTML(item.evidence_type)} · ${escapeHTML(item.case_id)}</h3>
+            <p>${escapeHTML(item.value)}</p>
+            <p>${escapeHTML(item.source)}</p>
+        </div>
+    `).join("");
+}
+
+form.addEventListener("submit", async function (event) {
+    event.preventDefault();
+
+    const submitButton = form.querySelector('button[type="submit"]');
+    submitButton.disabled = true;
+    message.classList.remove("error");
+    message.textContent = "Saving evidence...";
+
+    const data = {
+        case_id: document.querySelector("#case-id").value.trim(),
+        evidence_type: document.querySelector("#evidence-type").value,
+        value: document.querySelector("#evidence-value").value.trim(),
+        source: document.querySelector("#evidence-source").value.trim(),
+        timestamp: document.querySelector("#evidence-date").value,
+        notes: document.querySelector("#evidence-notes").value.trim()
+    };
+
+    try {
+        const response = await fetch("/api/evidence", {
+            method: "POST",
+            headers: { "Content-Type": "application/json" },
+            body: JSON.stringify(data)
+        });
+
+        const result = await response.json();
+
+        if (!response.ok) {
+            throw new Error(result.error || "Could not save evidence.");
+        }
+
+        message.textContent = result.message;
+        form.reset();
+        await loadEvidence();
+    } catch (error) {
+        message.classList.add("error");
+        message.textContent = error.message;
+    } finally {
+        submitButton.disabled = false;
+    }
+});
+
+document.querySelector("#search-input").addEventListener("input", renderTable);
+document.querySelector("#risk-filter").addEventListener("change", renderTable);
+
+document.querySelector("#export-btn").addEventListener("click", function () {
+    const columns = [
+        "id", "case_id", "evidence_type", "value",
+        "source", "timestamp", "notes", "is_duplicate", "risk_score"
+    ];
+
+    const quoteCSV = value =>
+        `"${String(value ?? "").replace(/"/g, '""')}"`;
+
+    const rows = [
+        columns.join(","),
+        ...evidenceRecords.map(item =>
+            columns.map(column => quoteCSV(item[column])).join(",")
+        )
+    ];
+
+    const blob = new Blob(["\uFEFF" + rows.join("\r\n")], {
+        type: "text/csv;charset=utf-8;"
+    });
+
+    const url = URL.createObjectURL(blob);
+    const link = document.createElement("a");
+    link.href = url;
+    link.download = "fraudtrace-evidence.csv";
+    link.click();
+    URL.revokeObjectURL(url);
+});
+
+loadEvidence();
+
+
