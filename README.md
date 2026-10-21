@@ -2,7 +2,7 @@
 
 **Connect the Evidence. Reveal the Fraud.**
 
-FraudTrace is a web-based prototype developed for the **SUTRAM 2026 Hackathon at IGDTUW**. It aims to help organize digital evidence, identify duplicate records, highlight suspicious patterns, and visualize connections between evidence and cases.
+FraudTrace is a web-based prototype developed for the **PITCH BREAK**. It aims to help organize digital evidence, identify duplicate records, highlight suspicious patterns, and visualize connections between evidence and cases.
 
 ## About the Project
 
